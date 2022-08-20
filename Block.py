@@ -43,6 +43,25 @@ class Block:
     def hash_target(self):
         return self._hash_target
 
+    @property
+    def index(self):
+        return self._index
+
+    @property
+    def timestamp(self):
+        return self._timestamp
+
+    @property
+    def metadata(self):
+        return self._metadata
+
+    @property
+    def nonce(self):
+        return self._nonce
+
+    @property
+    def transactions(self):
+        return self._transactions
     # Serializing and utf-8 encoding relevant data, and then hashing and creating a hex representation
     def hash_block(self):
         hash_string = '-'.join([
