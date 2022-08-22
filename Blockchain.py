@@ -76,7 +76,7 @@ class Blockchain:
 
         if len(self._invalid_transactions) > 0:
             print(
-                "Pending transaction has invalid transactions as it results in negative balance for {}. Need to ignore it".format(
+                " =============> Pending transaction has invalid transactions as it results in negative balance for {}. \n ".format(
                     [tr['message']['sender'] for tr in self._invalid_transactions]))
             return False
 
@@ -188,7 +188,7 @@ class Blockchain:
 
             if len(self._invalid_transactions) > 0:
                 print(
-                    " __validate_complete_account_balances ==> Pending transaction has invalid transactions as it results in negative balance for {}. Need to ignore it".format(
+                    " __validate_complete_account_balances ==> Pending transaction has invalid transactions as it results in negative balance for {}. ".format(
                         [tr['message']['sender'] for tr in self._invalid_transactions]))
                 valid_block = False
                 break
